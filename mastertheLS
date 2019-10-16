@@ -1,1 +1,1 @@
-ls -A -t -p -m | tr -d ''
+ls -A -t -p -m | tr -d ' '
