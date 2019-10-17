@@ -3,9 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintStr(str string) {
-	slice := []rune(str)
-	for _, a := range slice {
-		z01.PrintRune(rune(a))
+	for _, g := range str {
+		z01.PrintRune(g)
 	}
-	z01.PrintRune(10)
 }
