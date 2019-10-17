@@ -7,11 +7,9 @@ import (
 )
 
 func main() {
-	a := 13
+	x := 13
 	b := 2
-	var div int
-	var mod int
-	piscine.DivMod(a, b, &div, &mod)
-	fmt.Println(div)
-	fmt.Println(mod)
+	piscine.UltimateDivMod(&a, &b)
+	fmt.Println(a)
+	fmt.Println(b)
 }
