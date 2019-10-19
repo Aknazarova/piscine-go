@@ -1,4 +1,4 @@
-package raid1a
+package main
 
 import "github.com/01-edu/z01"
 
@@ -33,4 +33,8 @@ func Raid1a(x, y int) {
 			z01.PrintRune(10)
 		}
 	}
+}
+
+func main() {
+	Raid1a(5, 3)
 }
