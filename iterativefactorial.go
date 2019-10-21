@@ -1,6 +1,6 @@
 package piscine
 
-import piscine ".."
+import "github.com/01-edu/z01"
 
 func IterativeFactorial(nb int) int {
 
