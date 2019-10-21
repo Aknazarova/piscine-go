@@ -5,12 +5,10 @@ func RecursiveFactorial(nb int) int {
 		return 1
 	}
 	if nb < 0 {
-		return 0 
+		return 0
 	}
 	if nb > 1 && nb < 20 {
-		return nb* RecursiveFactorial(nb - 1)
+		return nb * RecursiveFactorial(nb-1)
 	}
 	return 0
 }
-
-
