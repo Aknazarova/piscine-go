@@ -14,3 +14,8 @@ func IterativeFactorial(nb int) int {
 	return 0
 	}
 }
+
+func main() {
+	arg := 4
+	fmt.Println(IterativeFactorial(arg))
+}
