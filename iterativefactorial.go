@@ -1,9 +1,7 @@
 package piscine
 
-import (
-	"fmt"
-	piscine ".."
-)
+import ".."
+	
 
 func IterativeFactorial(nb int) int {
 
