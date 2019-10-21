@@ -1,9 +1,9 @@
 package piscine
 
 func StrLen(str string) int {
-	str := []rune(str)
+	a := []rune(str)
 	count := 0
-	for range str {
+	for range a {
 		count++
 	}
 	return count
