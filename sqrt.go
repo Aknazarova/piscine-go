@@ -1,12 +1,11 @@
 package piscine
 
 func Sqrt(nb int) int {
-	result := 0
-	for i := 2; i <= nb; i++ {
-		if nb%i == 0 {
-			result = i
+	for i := 1; i*i <= nb; i++ {
+		if i*i == nb {
+			return i
 		}
-		return result
+		if i*i > nb
+		return 0
 	}
-	return 0
 }
