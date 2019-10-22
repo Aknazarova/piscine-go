@@ -4,8 +4,8 @@ func NRune(s string, n int) rune {
 	var x rune = 0
 	for index, char := range s {
 		if index == n-1 {
-			return index
+			x = char
 		}
 	}
-	return index *(-1)
+	return x
 }
