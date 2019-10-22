@@ -1,6 +1,6 @@
 package piscine
 
-func PrintNbrInOrder(n int)int{
+func PrintNbrInOrder(n int) int {
 	result := 0
 	for n > 0 {
 		remainder := n % 10
