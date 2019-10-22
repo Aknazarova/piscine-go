@@ -1,12 +1,9 @@
 package main
 
-import (
-	"fmt"
-	piscine ".."
-)
+import piscine ".."
 
 func main() {
-	str := "Hello 78 World!    4455 /"
-	nb := piscine.AlphaCount(str)
-	fmt.Println(nb)
+	piscine.PrintNbrInOrder(321)
+	piscine.PrintNbrInOrder(0)
+	piscine.PrintNbrInOrder(321)
 }
