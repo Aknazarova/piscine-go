@@ -1,6 +1,6 @@
 package piscine
 
-func StrLen(str string) int {
+func AlphaCount(str string) int {
 	a := []rune(str)
 	count := 0
 	for range a {
