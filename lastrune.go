@@ -1,4 +1,4 @@
-package lrune
+package piscine
 
 func LastRune(s string) rune {
 	var x rune = 0
