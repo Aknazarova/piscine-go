@@ -1,10 +1,12 @@
 package piscine
 
 func StrLen(str string) int {
-	a := []rune(str)
-	count := 0
-	for range a {
-		count++
+	word := 0
+
+	for _, a := range str  {
+		if (a > 'A' && a < 'Z') || (a > 'a'&& a < 'z')
+		word++
 	}
-	return count
+	}
+	return word
 }
