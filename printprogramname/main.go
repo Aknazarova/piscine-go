@@ -7,5 +7,5 @@ func main(){
 	for _, c := range num[0]{
 		z01.PrintRune(c)
 	}
-	z01.PrintRune(\n)
+	z01.PrintRune(10)
 }
