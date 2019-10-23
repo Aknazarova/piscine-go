@@ -1,10 +1,7 @@
-package main
+package printprogramname
 
-import (
-	"github.com/01-edu/z01"
-	"os"
-)
-
+import 	"github.com/01-edu/z01"
+import "os"
 func main() {
 	num := os.Args
 	for _, c := range num[0] {
