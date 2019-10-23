@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	z01.PrintRune(os.Args[0])
-
+	s := os.Args
+	z01.PrintRune(s])
 }
