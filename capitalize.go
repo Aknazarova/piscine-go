@@ -2,12 +2,12 @@ package piscine
 
 func Capitalize(s string) string {
 	x := []rune(s)
-	counter := 0
+	count := 0
 	n := true
 	for range x {
-		counter++
+		count++
 	}
-	for i := 0; i <= counter-1; i++ {
+	for i := 0; i <= count-1; i++ {
 		if n && (x[i] >= 'a' && x[i] <= 'z') {
 			x[i] = x[i] - 32
 			n = false
