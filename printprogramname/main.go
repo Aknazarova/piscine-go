@@ -7,5 +7,5 @@ import (
 
 func main() {
 	argument := os.Args
-	z01.PrintRune(argument)
+	z01.PrintRune(os.Args)
 }
