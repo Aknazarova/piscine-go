@@ -2,7 +2,7 @@ package printprogramname
 
 import (
 	"github.com/01-edu/z01"
-"os"
+	"os"
 )
 
 func main() {
@@ -10,4 +10,5 @@ func main() {
 	for _, c := range num[0] {
 		z01.PrintRune(c)
 	}
+	z01.PrintRune(10)
 }
