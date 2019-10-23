@@ -9,7 +9,7 @@ func main() {
 	for range str {
 		count++
 	}
-	for i := count - 1; i > 0; i-- { // ne scitat' 1-yi symbol
+	for i := count-1; i < 1; i-- { // ne scitat' 1-yi symbol
 		for _, char := range str[i] {
 			z01.PrintRune(char)
 		}
