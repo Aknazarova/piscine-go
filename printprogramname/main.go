@@ -1,7 +1,6 @@
 package printprogramname
 
 import (
-	"fmt"
 	"github.com/01-edu/z01"
 	"os"
 )
