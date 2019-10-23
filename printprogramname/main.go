@@ -8,5 +8,5 @@ import (
 
 func main() {
 	s := os.Args
-	z01.PrintRune(s])
+	z01.PrintRune(s)
 }
