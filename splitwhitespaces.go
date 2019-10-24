@@ -1,10 +1,31 @@
 package piscine
-
 func SplitWhiteSpaces(str string) []string {
-	a := make([]string, 1)
-	for _, x := range str {
-		if (x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z') {
-			a[0] = str
+	i := 0
+	sign := true
+	for _, char := range str{
+		if !(char == ' ' || char == '\t' || char == '\n') {
+				sign = true
+		} else { 
+			if sign {
+				i++
+				sign = false
+			}
+		}
+	}
+	a := make ([]string, i+1)
+	j := 0
+	mark := true
+	for j != i {
+		for _, char := range str {
+			if !(char == ' ' || char == '\t' || char == '\n') {
+				a[j] += string (char)
+				mark = true
+			} else {
+				if mark {
+					j++
+					mark = false 
+				}
+			}
 		}
 	}
 	return a
