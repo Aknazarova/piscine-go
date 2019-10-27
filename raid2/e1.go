@@ -1,27 +1,69 @@
 package main
-
 import (
-	"bufio"
 	"fmt"
 	"os"
-	"strconv"
-	"strings"
 )
 
 func main() {
 
-	board := parseInput(os.Args[1])
+	board := parseBoard(os.Args)
 
-	printBoard(board)
 
 	if backtrack(&board) {
-		fmt.Println("The Sudoku was solved successfully:")
 		printBoard(board)
 	} else {
-		fmt.Printf("The Sudoku can't be solved.")
+		fmt.Println("Error")
 	}
 }
+func InputCheck(args []string) bool {
+	if len(args) != 9 {
+		fmt.Println("Error")
+		return false
+	}
 
+	for i := 0; i < len(args); i++ {
+		if len(args[i]) != 9 {
+			fmt.Println("Error")
+			return false
+		}
+	}
+	for i := 0; i < len(args); i++ {
+		for _, k := range args[i] {
+			if k == 47 || k == 48 {
+				fmt.Println("Error")
+				return false
+			} else if k < 46 || k > 57 {
+				fmt.Println("Error")
+				return false
+			}
+		}
+	}
+	return true
+}
+func parseBoard (arg []string) [9][9] int {
+	var board = [9][9] int {}
+	for j:=1; j<=9;j++{
+		for index, letter := range os.Args[j] {
+			if letter == 46 {
+				letter = 48
+		
+			}
+			board [j-1][index] = int (letter -48)
+		}
+	}
+	return board
+} 
+func printBoard(arg [9][9]int) {
+	for i:=0; i<9; i++ {
+		for j:=0; j<9;j++ {
+			fmt.Print (arg [i][j])
+			if j <8 {
+				fmt.Printf(" ")
+			}
+		}
+		fmt. Println()
+	}
+}
 func backtrack(board *[9][9]int) bool {
 	if !hasEmptyCell(board) {
 		return true
@@ -29,7 +71,7 @@ func backtrack(board *[9][9]int) bool {
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
 			if board[i][j] == 0 {
-				for candidate := 9; candidate >= 1; candidate-- {
+				for candidate := 1; candidate <= 9; candidate++ {
 					board[i][j] = candidate
 					if isBoardValid(board) {
 						if backtrack(board) {
@@ -110,41 +152,4 @@ func hasDuplicates(counter [10]int) bool {
 		}
 	}
 	return false
-}
-
-func printBoard(board [9][9]int) {
-	fmt.Println("+-------+-------+-------+")
-	for row := 0; row < 9; row++ {
-		fmt.Print("| ")
-		for col := 0; col < 9; col++ {
-			if col == 3 || col == 6 {
-				fmt.Print("| ")
-			}
-			fmt.Printf("%d ", board[row][col])
-			if col == 8 {
-				fmt.Print("|")
-			}
-		}
-		if row == 2 || row == 5 || row == 8 {
-			fmt.Println("\n+-------+-------+-------+")
-		} else {
-			fmt.Println()
-		}
-	}
-}
-
-func parseInput(input string) [9][9]int {
-	board := [9][9]int{}
-	scanner := bufio.NewScanner(strings.NewReader(input))
-
-	scanner.Split(bufio.ScanRunes)
-
-	for row := 0; row < 9; row++ {
-		for col := 0; col < 9; col++ {
-			scanner.Scan()
-			i1, _ := strconv.Atoi(scanner.Text())
-			board[row][col] = i1
-		}
-	}
-	return board
 }

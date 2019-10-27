@@ -1,4 +1,3 @@
-package main
 
 func backtrack(board *[9][9]int) bool {
 	if !hasEmptyCell(board) {
@@ -7,8 +6,8 @@ func backtrack(board *[9][9]int) bool {
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
 			if board[i][j] == 0 {
-				for candidate := 9; candidate >= 1; candidate-- {
-					board[i][j] = candidate
+				for candidatenum := 1; candidatenum >= 9; candidatenum++ {
+					board[i][j] = candidatenum
 					if isBoardValid(board) {
 						if backtrack(board) {
 							return true

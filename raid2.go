@@ -1,32 +1,32 @@
-package main
+package ma1
 
 import "fmt"
 
 var sudoku = [9][9]int{}
 
-func main(){
+func main1(){
   IsValid(sudoku, 0)
   Display(sudoku)
 }
 
-func Display(sudoku[9][9] int){
-  var x, y int
+// func Display(sudoku[9][9] int){
+//   var x, y int
 
-  for x = 0; x < 9; x++ {
-        fmt.Println("")
-        if(x == 3 || x == 6){
-          fmt.Println(" ")
-        }
-      for y = 0; y < 9; y++ {
-        if(y == 3 || y == 6){
-          fmt.Print("|")
-        }
-         fmt.Print(sudoku[x][y])
-      }
+//   for x = 0; x < 9; x++ {
+//         fmt.Println("")
+//         if(x == 3 || x == 6){
+//           fmt.Println(" ")
+//         }
+//       for y = 0; y < 9; y++ {
+//         if(y == 3 || y == 6){
+//           fmt.Print("|")
+//         }
+//          fmt.Print(sudoku[x][y])
+//       }
 
-   }
+//    }
 
-}
+// }
 
 func AbsentOnLine(k int, sudoku [9][9]int, x int) bool {
   var y int
