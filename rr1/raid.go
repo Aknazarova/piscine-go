@@ -160,7 +160,7 @@ func ReverseSolveSudoku(revsudoku *[9][9]rune) bool {
 				for i := '9'; i >= '1'; i-- {
 					if IsValid(revsudoku, x, y, i) {
 						revsudoku[y][x] = i
-						if ReverseSolveSudoku(revsudoku) {
+						if ReverseSolsolverveSudoku(revsudoku) {
 							return true
 						}
 					}
