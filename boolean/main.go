@@ -1,23 +1,24 @@
 package main
+
 import "os"
 import "github.com/01-edu/z01"
 
 func main() {
 	str := os.Args[1:]
 	cnt := 0
-//	i := []rune (str)
+	//	i := []rune (str)
 	for i := range str {
-		cnt = i+1
+		cnt = i + 1
 	}
-	if isEven(cnt){
-		printStr("I have an even number of arguments")//четный 
+	if isEven(cnt) {
+		printStr("I have an even number of arguments") //четный
 	} else {
-		printStr("I have an odd number of arguments")// нечетный
+		printStr("I have an odd number of arguments") // нечетный
 	}
 }
 
 func isEven(nbr int) bool {
-	if nbr%2==0 {
+	if nbr%2 == 0 {
 		return true
 	} else {
 		return false
