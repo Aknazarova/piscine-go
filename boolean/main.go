@@ -1,4 +1,4 @@
-package main
+package boolean
 
 import "os"
 import "github.com/01-edu/z01"
