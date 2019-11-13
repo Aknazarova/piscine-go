@@ -1,13 +1,17 @@
-package piscine
+package main
+
+import "fmt"
 
 func StrRev(s string) string {
-	var count int = -1
-	for range s {
-		count++
+	var ans string
+	for _, c := range s {
+		ans = string(c) + ans
 	}
-	sX := []byte(s)
-	for i := 0; i <= count; i++ {
-		sX[i] = s[count-i]
-	}
-	return string(sX)
+	return ans
+}
+
+func main() {
+	s := "Hello World!"
+	s = StrRev(s)
+	fmt.Println(s)
 }
